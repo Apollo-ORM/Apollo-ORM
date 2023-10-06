@@ -2,7 +2,7 @@
   <a href=""><img src="https://github.com/Apollo-ORM/Apollo-ORM/blob/main/docs/static/img/logo-readme.svg?sanitize=true" alt="Apollo-ORM" /></a>
 </h1>
 
-TypeScript ORM for Node.js based built on Active Record Pattern, Supports MySQL, MariaDB, PostgreSQL and SQLite databases. 
+TypeScript ORM for Node.js built on Active Record Pattern, Supports MySQL, MariaDB, PostgreSQL and SQLite databases. 
 
 > Heavily inspired by [Eloquent](https://laravel.com/docs/8.x/eloquent).
 
