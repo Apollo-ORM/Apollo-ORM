@@ -2,7 +2,6 @@
   "name": "apollo",
   "module": "index.ts",
   "type": "module",
-  "workspaces": ["packages/*"],
   "devDependencies": {
     "bun-types": "latest"
   },

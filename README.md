@@ -4,7 +4,7 @@
 
 TypeScript ORM for Node.js built on Active Record Pattern, Supports MySQL, MariaDB, PostgreSQL and SQLite databases. 
 
-> Heavily inspired by [Eloquent](https://laravel.com/docs/8.x/eloquent).
+> Heavily inspired by [Active Record](https://guides.rubyonrails.org/active_record_basics.html) and [Eloquent](https://laravel.com/docs/8.x/eloquent).
 
 
 ## Authors
