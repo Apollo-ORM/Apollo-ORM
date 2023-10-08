@@ -1,9 +1,9 @@
 import { Connection, ConnectionOptions } from "apollo_core/connection";
-import { afterEach, beforeEach, expect, it, describe } from "bun:test";
+import { afterEach, beforeEach, expect, it, describe, test } from "bun:test";
 import { Database } from "bun:sqlite";
 
 
-describe('Connection', () => {
+describe('connection', () => {
   let connection: Connection;
   const db = new Database(":memory:");
 
@@ -26,22 +26,22 @@ describe('Connection', () => {
     await connection.disconnect();
   });
 
-  it('should initialize correctly', () => {
+  test('should initialize correctly', () => {
     expect(connection).toBeInstanceOf(Connection);
   });
 
-  it('should connect successfully', async () => {
+  test('should connect successfully', async () => {
     await connection.connect();
     expect(connection.ready).toEqual(true);
   });
 
-  it('should perform a health check successfully', async () => {
+  test('should perform a health check successfully', async () => {
     await connection.connect();
     const isHealthy = await connection.healthCheck();
     expect(isHealthy).toEqual(true);
   });
 
-  it('should disconnect successfully', async () => {
+  test('should disconnect successfully', async () => {
     await connection.connect();
     await connection.disconnect();
     expect(connection.ready).toEqual(false);
