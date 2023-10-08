@@ -23,5 +23,7 @@ jobs:
       run: bun install
 
     - name: Run Tests
-      run: bun test ./tests/*
+      run: |
+       cd tests/
+       bun test 
 
