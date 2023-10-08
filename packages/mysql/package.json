@@ -1,5 +1,5 @@
 {
-  "name": "apollo",
+  "name": "apollo_mysql",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {

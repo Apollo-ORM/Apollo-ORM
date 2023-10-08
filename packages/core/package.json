@@ -1,8 +1,7 @@
 {
-  "name": "apollo",
+  "name": "apollo_core",
   "module": "index.ts",
   "type": "module",
-  "workspaces": ["packages/*"],
   "devDependencies": {
     "bun-types": "latest"
   },
@@ -11,8 +10,6 @@
   },
   "dependencies": {
     "@types/knex": "^0.16.1",
-    "@types/node": "^20.8.3",
-    "apollo_core": "workspace:*",
     "knex": "^3.0.1",
     "sqlite3": "^5.1.6"
   }

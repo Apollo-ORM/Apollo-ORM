@@ -1,5 +1,5 @@
 {
-  "name": "apollo",
+  "name": "apollo_orm",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
@@ -7,5 +7,8 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "apollo_core": "workspace:*"
   }
 }
