@@ -23,5 +23,5 @@ jobs:
       run: bun install
 
     - name: Run Tests
-      run: bun test --test-name-pattern testing
+      run: bun test --test-name-pattern Connection
 
