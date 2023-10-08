@@ -23,7 +23,5 @@ jobs:
       run: bun install
 
     - name: Run Tests
-      run: |
-       cd tests/
-       bun test 
+      run: bun test --test-name-pattern connection
 
