@@ -1,13 +1,13 @@
 import {Knex , knex as KnexType} from 'knex';
 import { EventEmitter } from 'events';
+import Drivers from '../dialects/drivers';
 
 export interface ConnectionOptions {
   name: string;
   config: Knex.Config;
-  // driver: Knex.Config
 }
 
-export class Connection extends EventEmitter {
+export class Connection extends EventEmitter  {
   private connection?: Knex;
   private isConnected: boolean = false;
   private healthCheckInterval?: NodeJS.Timeout;
