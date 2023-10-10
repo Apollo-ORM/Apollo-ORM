@@ -1,5 +1,5 @@
 {
-  "name": "apollo_mysql",
+  "name": "apollo_core",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
@@ -7,5 +7,10 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/knex": "^0.16.1",
+    "knex": "^3.0.1",
+    "sqlite3": "^5.1.6"
   }
 }
