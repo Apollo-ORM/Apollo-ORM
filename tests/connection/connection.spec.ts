@@ -6,9 +6,14 @@ describe('connection', () => {
   const connectionOptions: ConnectionOptions = {
     name: 'TestConnection',
     config: {
-      client: 'sqlite3',
+      client: 'mysql',
       connection: {
-        filename: 'tests/connection/my.db3',
+        host: 'mysql',
+        port: 3306,
+        userName: 'user',
+        database: 'database',
+        password: 'password'
+
       },
       useNullAsDefault: true,
     },
@@ -31,11 +36,6 @@ describe('connection', () => {
     expect(connection.ready).toEqual(true);
   });
 
-  it('should perform a health check successfully', async () => {
-    await connection.connect();
-    const isHealthy = await connection.healthCheck();
-    expect(isHealthy).toEqual(true);
-  });
 
   it('should disconnect successfully', async () => {
     await connection.connect();

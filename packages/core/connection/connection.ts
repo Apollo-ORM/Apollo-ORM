@@ -7,7 +7,7 @@ export interface ConnectionOptions {
   config: Knex.Config;
 }
 
-export class Connection extends EventEmitter  {
+export class Connection extends EventEmitter {
   private connection?: Knex;
   private isConnected: boolean = false;
   private healthCheckInterval?: NodeJS.Timeout;
@@ -31,12 +31,6 @@ export class Connection extends EventEmitter  {
       if (!this.connection) {
         throw new Error('Connection is not properly initialized');
       }
-
-      
-      await this.healthCheck();
-
-      // Start a health check interval (e.g., every 30 seconds)
-      this.healthCheckInterval = setInterval(() => this.healthCheck(), 30000);
 
       this.isConnected = true;
 
@@ -75,26 +69,4 @@ export class Connection extends EventEmitter  {
     return this.isConnected;
   }
 
-  /**
-   * Executes a health check query to verify the database connection.
-   */
-  public async healthCheck(): Promise<boolean> {
-    try {
-      if (!this.connection) {
-        throw new Error('Connection is not properly initialized');
-      }
-
-      const result = await this.connection.raw('SELECT 1');
-
-      const isHealthy = result?.[0]?.[0] === 1;
-
-      this.emit('healthcheck', isHealthy);
-
-      return isHealthy;
-    } catch (error) {
-      this.emit('healthcheck:error', error);
-
-      return false;
-    }
-  }
 }
